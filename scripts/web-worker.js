@@ -1,4 +1,5 @@
-//For good reasons, Chrome doesn't let you load web workers when running scripts from a local file. 
+//For good reasons, Chrome doesn't let you load web workers when running scripts from a local file.
+//To run your app from the file:// scheme, run Chrome with the --allow-file-access-from-files flag set. 
 var worker = new Worker('scripts/myWork.js');
 worker.onmessage = function (e) {
     $('#result').append(e.data + '<br />');
